@@ -84,12 +84,12 @@ sudo gem install foundation
 sudo gem install compass
 
 install MEAN stack via git
-echo "${red}Installing meanjs ..."
+echo "${red}Installing meanjs ...${NC}"
 cd /vagrant
 git clone https://github.com/meanjs/mean.git meanjs
 cd meanjs
 npm install
-echo "${red}Running MEAN application ..."
+echo "${red}You can run the meanjs application by typing \"grunt\". You can view it by going to http://localhost:3000${NC}"
 # grunt
 
 #for serving static sites from /vagrant using apache
