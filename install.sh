@@ -28,7 +28,7 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
 export NVM_DIR="/home/vagrant/.nvm" 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install 0.10.32
-echo "${red}nvm use 0.10" >> ~/.profile
+echo "nvm use 0.10" >> ~/.profile
 
 echo "${red}Installing Bower ...${NC}"
 npm install -g bower
@@ -43,28 +43,15 @@ npm install -g gulp
 #from http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 echo "${red}Installing MongoDB ...${NC}"
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo '${red}deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
 sudo apt-get update
 sudo apt-get install -y mongodb-org
 
 #update your ruby using rbenvs 
 echo "${red}Updating Ruby using rbenvs ...${NC}"
-# curl https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
-# #sudo echo '${red}export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-# #sudo echo '${red}eval "$(rbenv init -)"' >> ~/.bashrc
-# export PATH="$HOME/.rbenv/bin:$PATH"
-# eval "$(rbenv init -)"
-# rbenv bootstrap-ubuntu-12-04
-# #http://tarashish.com/blog/2013/02/02/fixing-mkmf-load-error-ubuntu/
-# sudo apt-get install ruby1.9.1-dev -y
-# rbenv install 2.1.0
-# rbenv global 2.1.0
-# rbenv rehash
-# sudo echo "${red}gem: --no-ri --no-rdoc" > ~/.gemrc
-# ruby -v
 curl https://raw.githubusercontent.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
-sudo echo port PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-sudo echo al "$(rbenv init -)"' >> ~/.bashrc
+sudo echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+sudo echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 rbenv bootstrap-ubuntu-12-04
