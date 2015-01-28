@@ -73,7 +73,7 @@ sudo apt-get install ruby1.9.1-dev -y
 rbenv install 2.1.0
 rbenv global 2.1.0
 rbenv rehash
-sudo echo m: --no-ri --no-rdoc" > ~/.gemrc
+sudo echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 ruby -v
 
 #install tools globally for front-end development
