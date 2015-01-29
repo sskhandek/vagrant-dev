@@ -66,11 +66,14 @@ ruby -v
 #install tools globally for front-end development
 echo "${red}Installing Front End Development Tools ...${NC}"
 gem update --system
+echo "${red}Installing Bundler ...${NC}"
 sudo gem install bundler
+echo "${red}Installing Foundation ...${NC}"
 sudo gem install foundation
+echo "${red}Installing Compass ...${NC}"
 sudo gem install compass
 
-install MEAN stack via git
+#install MEAN stack via git
 echo "${red}Installing meanjs ...${NC}"
 cd /vagrant
 git clone https://github.com/meanjs/mean.git meanjs
