@@ -6,10 +6,10 @@ NC='\033[0m' # No Color
 
 echo "${red}Updating apt-get ...${NC}"
 sudo apt-get update
-echo "${red}Installing Apache ...${NC}"
-sudo apt-get install -y apache2
-sudo rm -rf /var/www/html
-sudo ln -fs /vagrant /var/www/html
+# echo "${red}Installing Apache ...${NC}"
+# sudo apt-get install -y apache2
+# sudo rm -rf /var/www/html
+# sudo ln -fs /vagrant /var/www/html
 echo "${red}Installing Git ...${NC}"
 sudo apt-get install -y git
 echo "${red}Installing other utilities ...${NC}"
@@ -72,19 +72,22 @@ echo "${red}Installing Foundation ...${NC}"
 sudo gem install foundation
 echo "${red}Installing Compass ...${NC}"
 sudo gem install compass
+echo "${red}Installing Susy ...${NC}"
+sudo gem install susy
 
 #install MEAN stack via git
-echo "${red}Installing meanjs ...${NC}"
-cd /vagrant
-git clone https://github.com/meanjs/mean.git meanjs
-cd meanjs
-npm install
-echo "${red}You can run the meanjs application by typing \"grunt\". You can view it by going to http://localhost:3000${NC}"
+# echo "${red}Installing meanjs ...${NC}"
+# cd /vagrant
+# git clone https://github.com/meanjs/mean.git meanjs
+# cd meanjs
+# npm install
+# echo "${red}You can run the meanjs application by typing \"grunt\". You can view it by going to http://localhost:3000${NC}"
 # grunt
 
 #for serving static sites from /vagrant using apache
 #sudo chmod -R 755 /vagrant
 #sudo service apache2 restart
+echo "${red}Installation Process Complete."
 
 
 
