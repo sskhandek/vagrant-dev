@@ -87,7 +87,7 @@ sudo gem install susy
 #for serving static sites from /vagrant using apache
 #sudo chmod -R 755 /vagrant
 #sudo service apache2 restart
-echo "${red}Installation Process Complete."
+echo "${red}Installation Process Complete. You should do \"source ~/.profile\" before you proceed any further ${NC}."
 
 
 
