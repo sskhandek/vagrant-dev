@@ -32,12 +32,14 @@ echo "nvm use 0.10" >> ~/.profile
 
 echo "${red}Installing Bower ...${NC}"
 npm install -g bower
+npm install -g bower-installer
 echo "${red}Installing Grunt ...${NC}"
 npm install -g grunt-cli
 echo "${red}Installing Yeoman ...${NC}"
 npm install -g yo
 echo "${red}Installing Gulp ...${NC}"
 npm install -g gulp
+
 
 #install and run MONGO
 #from http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
@@ -74,6 +76,9 @@ echo "${red}Installing Compass ...${NC}"
 sudo gem install compass
 echo "${red}Installing Susy ...${NC}"
 sudo gem install susy
+
+echo "${red}Installing Yeoman Generators for meanjs ...${NC}"
+npm install -g generator-meanjs
 
 #install MEAN stack via git
 # echo "${red}Installing meanjs ...${NC}"
