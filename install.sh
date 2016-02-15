@@ -1,5 +1,15 @@
 #!/bin/bash
 
+username="vagrant"
+
+if [ "$#" -gt 0 ]
+then
+    username=$1
+fi
+
+echo "Running script with username: $username"
+
+
 #this file installs all required software on our VM
 red='\033[0;31m'
 NC='\033[0m' # No Color
@@ -25,7 +35,7 @@ sudo apt-get -y install curl git-core
 #http://www.wenincode.com/installing-node-jsnpm-without-sudo/
 echo "${red}Installing Node and NVM ...${NC}"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.17.2/install.sh | bash
-export NVM_DIR="/home/vagrant/.nvm" 
+export NVM_DIR="/home/$username/.nvm" 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install 0.10.32
 echo "nvm use 0.10" >> ~/.profile
